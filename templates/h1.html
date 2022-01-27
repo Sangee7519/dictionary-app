@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    img{
+      width: 22px;
+      height: 22px;
+      margin-top:445px;
+      background-color: black ;
+    }
+  </style>
+  <title>dictinary</title>
+   <link rel = "icon" href = 
+"logo.png" 
+        type = "image/x-icon">
+ <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 's1.css' %}">
+
+</head>
+<body>
+
+<div class="hero-image">
+<div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">DICTIONARY</h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="/home">Home</a></li>
+            <li><a href="/Dictionary">Dictionary</a></li>
+            <li><a href="/signup">Signup</a></li>
+            <li><a href="login">Login</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</div>
+<div style="color:indianred;margin-top:10px;">
+  <center>
+  <h1>DICTIONARY WORLD</h1><br><br>
+     {% csrf_token %}
+<h4 style="font-size:26px;color:whitesmoke;font-weight:bold;" >
+{{result}}
+</h4>
+</center>
+
+</body>
+</html>

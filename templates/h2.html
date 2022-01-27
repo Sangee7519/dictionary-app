@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    
+  </style>
+  <title>Signup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 's1.css' %}">
+
+</head>
+<body>
+  <div class="main">
+    <div class="navbar">
+      <div class="icon">
+        <h4 class="logo">DICTIONARY</h4>
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/signup">Signup</a></li>
+        </ul>
+      </div>
+      <div align="center">
+      <form action="/insert" method="GET" autocomplete="off">
+         <center class="form" >
+          {% csrf_token %}
+     <h2> Register Here</h2>
+     <input type="name" name="name" placeholder="enter your name" class="form-control" 
+     id="name" required onkeydown="namevalid()" autocomplete="off">
+     <span id="err"></span>
+        <input type="email" name="email" placeholder="enter your email"
+        class="form-control" id="validationTooltip01" required>
+        <input type="phone" name="phone" placeholder="enter phone number"
+        class="form-control" id="phone" required onkeydown="phonevalid()"><span id="perr"></span>
+        <input type="password" name="password" placeholder="enter your password"
+        class="form-control" id="password" required onkeydown="passvalid()"><span id="psaerr"></span><br>
+        <button class="bn"> Sign Up</button><br><br>
+        <p class="lin"> you have an account<br><a href="/login">Login</a> here</p>
+    
+      </center>
+      </form>
+     
+    </div>
+    
+  </div></div>
+
+<script>
+function namevalid()
+    {
+        var nm,reg;
+       reg= /^[a-zA-Z]*$/
+        nm=document.getElementById("name").value;
+        err=document.getElementById("err");
+        if(!reg.test(nm))
+        {
+            err.innerHTML="enter only alphabets";
+            err.style.color="black";
+        }
+        else
+        {
+            err.innerHTML="";
+        }
+    }
+    function phonevalid()
+    {
+        var nm,reg;
+       reg= /^[1-9]*$/
+        nm=document.getElementById("phone").value;
+        err=document.getElementById("perr");
+        if(!reg.test(nm))
+        {
+            err.innerHTML="enter only numbers";
+            err.style.color="black";
+        }
+        else
+        {
+            err.innerHTML="";
+        }
+    }
+    function passvalid()
+    {
+        var nm,reg;
+       reg= /^[a-zA-Z1-9]*$/
+        nm=document.getElementById("password").value;
+        err=document.getElementById("paerr");
+        if(!reg.test(nm))
+        {
+            err.innerHTML="enter only password strongly";
+            err.style.color="black";
+        }
+        else
+        {
+            err.innerHTML="";
+        }
+    }
+
+</script></body>
+</html>

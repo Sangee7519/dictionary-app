@@ -1,0 +1,73 @@
+
+body{
+  background-color:whitesmoke;
+}
+.main{
+  width: 100%;
+  background-color:black;
+}
+.navbar{
+  width: 1200px;
+  height: 70px;
+  margin: auto;
+}
+.icon{
+  width: 20px;
+  float: left;
+  height: 14px;
+}
+.logo{
+  color:red;
+  font-family: arial;
+  font-size: 30px;
+  font-weight: bold;
+  float: left;
+  width:50px;
+  height:30px;
+}
+.menu{
+  width:200px;
+  float: right;
+  height: 30px;
+}
+ul{
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li{
+  list-style: circle;
+  margin-left: 90px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+ul li a{
+  text-decoration: inherit;
+  color: red;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: 1.4sss;
+}
+
+
+ul li a:hover{
+  color: black;
+  border: 1px solid darkred;
+  background-color: ghostwhite;
+}
+
+h2{
+  color: red;
+}
+img{
+  width: 1000px;
+  height: 600px;
+}
+.foot{
+  background-color:gray;
+  color: red;
+  display: block;
+}

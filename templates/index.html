@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head><style type="text/css">
+body{
+  background-image: url("https://legal.thomsonreuters.com/content/dam/ewp-m/images/legal/en/photography/photography/201042_97691998.jpeg.transform/hero-s/q90/image.jpg");
+  background-color: #cccccc;
+  height:900px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.main{
+  width: 100%;
+  background-color: blue;
+  height: 60px;
+}
+.navbar{
+  width: 1200px;
+  height: 60px;
+  margin: auto;
+}
+.icon{
+  width: 20px;
+  float: left;
+  height: 14px;
+}
+.logo{
+  color:blanchedalmond;
+  font-family: arial;
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  width:40px;
+  height:30px;
+  margin-top:6px;
+}
+.menu{
+  width:200px;
+  float: right;
+  height: 30px;
+}
+ul{
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li{
+  list-style: circle;
+  margin-left: 90px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+ul li a{
+  text-decoration: inherit;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: 1.4sss;
+}
+
+
+ul li a:hover{
+  color: black;
+  border: 1px solid darkred;
+  background-color: ghostwhite;
+}
+    </style>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Django Dictionary</title>
+  </head>
+  <body style="background-color:ghostwhite;">
+    <div class="hero-image">
+<div class="main">
+      <div class="navbar">
+        <div class="icon">
+          <h2 class="logo">DICTIONARY</h2>
+        </div>
+        <div class="menu">
+          <ul>
+            <li><a href="/home">home</a></li>
+            <li><a href="/Quotes">Quotes</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+</div>
+
+    <div class="container w-50 my-3">
+    <div class="container btn btn-primary">
+        <h1>Dictionary App</h1>
+    </div>
+    <br><br><br>
+    <center>
+      <div class="mb-3">
+        <form action="/Dictionary" method="post">
+            {% csrf_token %}
+            <input type="text" class="form-control" name="word" id="exampleFormControlInput1" placeholder="Search Word..."><br>
+             <select required name="language" class="btn-primary">
+        <option value="Hindi">Hindi</option>
+        <option value="Marathi">Marathi</option>
+        <option value="German">German</option>
+        <option value="Greek">Greek</option>
+        <option value="Tamil">Tamil</option>
+    </select><br><br>
+            <input type="submit" name="" class="btn btn-primary" value="meaning">
+        </form>
+     </div></center></div>
+      <br>
+      <div style="font-weight:bold;margin-left: 100px;" >
+    <h1 class="text-danger">{{word}}</h1>
+    <h5 class="text-primary">meaning :<br>{{text}}</h5>
+     <h5 class="text-dark">synonyms :<br>{{se}}</h5>
+        <h5 class="text-danger">idioms :<br>{{idoms}}</h5>
+        <h5 class="text-danger">translation:<br>{{translator}}</h5>
+
+
+    </div>
+
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+  </body>
+</html>

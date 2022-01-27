@@ -1,0 +1,145 @@
+</div>
+          <div class="container w-50 my-3">
+            <input type="text"class="form-control" id="validationDefault01" name="lname" placeholder="Enter the last name"  required>
+          </div>
+          <div class="container w-50 my-3">
+            <input type="phone"class="form-control" id="validationDefault01" name="phone"  placeholder="Enter the phone number" required>
+          </div>
+          <div class="container w-50 my-3">
+            <input type="email"class="form-control" id="validationDefault01" name="email" placeholder="Enter the email id" required>
+          </div>
+
+          <div class="container w-50 my-3">
+            <input type="password"class="form-control" id="validationDefault01" name="password" placeholder="Enter the Password" required>
+          </div>
+          <div class="container w-50 my-3">
+            <input type="text"class="form-control" id="validationDefault01" name="cpassword" placeholder="Enter the confirm password" required>
+          </div>
+              <script type="text/javascript">
+      function namevalid()
+      {
+        var name=document.getElementById("name").value;
+        var err=document.getElementById('err');
+        if(name.length==0)
+        {
+          err.innerHTML="* please enter the name only";
+          err.style.color=red;
+        }
+        else
+        {
+          err.innerHTML="";
+        }
+      }
+      function onlyalphabet(){
+        var name,reg;
+        reg=/^[a-zA-Z]*$/
+        name=document.getElementById("name").value
+        err=document.getElementById("err");
+        if(!reg.test(name))
+        {
+          err.innerHTML="enter the onlyalphabet";
+          err.style.color='red';
+        }
+        else
+        {
+          err.innerHTML="";
+        }
+      }
+        function alphabet(){
+        var name,reg;
+        reg=/^[a-zA-Z]*$/
+        name=document.getElementById("lname").value
+        err=document.getElementById("err");
+        if(!reg.test(lname))
+        {
+          err.innerHTML="enter the only alphabet";
+          err.style.color='red';
+        }
+        else
+        {
+          err.innerHTML="";
+        }
+      }
+      function phone(){
+        var name,reg;
+        reg=/^[0-5]*$/
+        name=document.getElementById("lname").value
+        err=document.getElementById("err");
+        if(!reg.test(lname))
+        {
+          err.innerHTML="enter the numbers";
+          err.style.color='red';
+        }
+        else
+        {
+          err.innerHTML="";
+        }
+      }
+body{
+  background-color:blanchedalmond;
+  background-color: #cccccc;
+  height: 658px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.main{
+  width: 100%;
+  background-color: deepskyblue;
+  height: 60px;
+}
+.navbar{
+  width: 1200px;
+  height: 60px;
+  margin: auto;
+}
+.icon{
+  width: 20px;
+  float: left;
+  height: 14px;
+}
+.logo{
+  color:blanchedalmond;
+  font-family: arial;
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  width:40px;
+  height:30px;
+  margin-top:6px;
+}
+.menu{
+  width:200px;
+  float: right;
+  height: 30px;
+}
+ul{
+  float: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul li{
+  list-style: circle;
+  margin-left: 90px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+
+ul li a{
+  text-decoration: inherit;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+  transition: 1.4sss;
+}
+
+
+ul li a:hover{
+  color: black;
+  border: 1px solid darkred;
+  background-color: ghostwhite;
+}
